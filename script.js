@@ -26,16 +26,13 @@ window.onscroll = () => {
             });
             // active sections for animation on scroll
             sec.classList.add('show-animate');
-        }
-        // if want to animation that repeats on scroll use this
-        else {
+        } else {
             sec.classList.remove('show-animate');
         }
     });
 
     // sticky navbar
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle icon and navbar when click navbar links (scroll)
@@ -44,6 +41,6 @@ window.onscroll = () => {
 
     // animation footer on scroll
     let footer = document.querySelector('footer');
-
-    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+    footer.classList.toggle('show-animate',
+        this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
